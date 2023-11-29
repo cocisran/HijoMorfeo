@@ -7,14 +7,21 @@ using TMPro;
 public class GameSupervisor : MonoBehaviour
 {
     [Header("Cartas")]
-    public GameObject[] cards;
-
-    private List<GameObject> characterCards;
-    private List<GameObject> placeCards;
-    private List<GameObject> situationCards;
-
+    public GameObject cardModel;
     public GameObject option1;
     public GameObject option2;
+
+
+    [Header("Cartas Source")]
+    public string pathCharacterCards;
+    public string pathPlaceCards;
+    public string pathSituationCards;
+
+    private Card[] characterCards;
+    private Card[] placeCards;
+    private Card[] situationCards;
+
+    
 
     [Header("UI")]
     public TextMeshProUGUI header;
@@ -37,36 +44,15 @@ public class GameSupervisor : MonoBehaviour
 
     void OnEnable()
     {
+
         gameGoesOn = true;
         CurrentGameStage = GameStages.SelectCharacter;
         header.text = historyStart;
 
         // Para obtimizar busqueda
-        characterCards = new List<GameObject>();
-        placeCards = new List<GameObject>(); 
-        situationCards = new List<GameObject>(); 
-        foreach (GameObject card in cards)
-        {
-            CardBehavior cardBehavior = card.GetComponent<CardBehavior>();
-            switch (cardBehavior.cardInfo.gameStage)
-            {
-                case GameStages.SelectCharacter:
-                    {
-                        characterCards.Add(card);
-                        break;
-                    }
-                case GameStages.SelectScenary:
-                    {
-                        placeCards.Add(card);
-                        break;
-                    }
-                case GameStages.SelectSituation:
-                    {
-                        situationCards.Add(card);
-                        break;
-                    }
-            }
-        }
+        characterCards = Resources.LoadAll<Card>(pathCharacterCards);
+        placeCards = Resources.LoadAll<Card>(pathPlaceCards);
+        situationCards = Resources.LoadAll<Card>(pathSituationCards);
 
         // Asignamos las primeras cartas
         getNextCards();
@@ -78,7 +64,7 @@ public class GameSupervisor : MonoBehaviour
         if (CurrentGameStage == GameStages.DreamEvaluation)
             return;
 
-        List<GameObject> source = new List<GameObject>();
+        Card[] source = new Card[0];
         switch (CurrentGameStage)
         {
             case GameStages.SelectCharacter:
@@ -97,13 +83,18 @@ public class GameSupervisor : MonoBehaviour
                     break;
                 }
         }
-        int option1Index = UnityEngine.Random.Range(0, source.Count);
-        int option2Index = UnityEngine.Random.Range(0, source.Count);
+        int option1Index = UnityEngine.Random.Range(0, source.Length);
+        int option2Index = UnityEngine.Random.Range(0, source.Length);
         if (option2Index == option1Index)
-            option2Index = (option2Index + 1) % characterCards.Count;
+            option2Index = (option2Index + 1) % source.Length;
 
-        GameObject newOption1 = Instantiate(source[option1Index], option1.transform.position, Quaternion.identity);
-        GameObject newOption2 = Instantiate(source[option2Index], option2.transform.position, Quaternion.identity);
+
+        CardBehavior behavior = cardModel.GetComponent<CardBehavior>();
+        behavior.cardInfo = source[option1Index];
+        GameObject newOption1 = Instantiate(cardModel, option1.transform.position, Quaternion.identity);
+
+        behavior.cardInfo = source[option2Index];
+        GameObject newOption2 = Instantiate(cardModel, option2.transform.position, Quaternion.identity);
 
         Destroy(option1);
         Destroy(option2);

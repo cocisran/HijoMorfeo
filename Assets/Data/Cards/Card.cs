@@ -21,4 +21,7 @@ public class Card: ScriptableObject
     public int edad;
     public int cansancio;
 
+    [Header("CardExtra")]
+    public AudioSource cardSound;
+
 }

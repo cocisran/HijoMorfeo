@@ -18,11 +18,12 @@ public class CardBehavior : MonoBehaviour
     private void OnEnable()
     {
         description.text = cardInfo.descripcion;
+        sprite.sprite = cardInfo.cardSprite;
     }
 
     private void OnMouseDown()
     {
-        sprite.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+       // sprite.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         stageChangeEvent.Raise(this, cardInfo);
     }
 
