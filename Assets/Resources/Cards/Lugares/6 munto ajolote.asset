@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2d16dadc0f6bea41a2fbb97e5c0990a, type: 3}
-  m_Name: 2 Edad media
+  m_Name: 6 munto ajolote
   m_EditorClassIdentifier: 
-  descripcion: en la edad media
+  descripcion: mundo magico de ajolotes
   onSelectedHeader: 'donde '
-  cardSprite: {fileID: 21300000, guid: b1abf519c91f44f4d876d60afd6adaa4, type: 3}
+  cardSprite: {fileID: 0}
   etiquetas: []
-  gameStage: 1
+  gameStage: 0
   estres: 0
   edad: 0
   cansancio: 0
