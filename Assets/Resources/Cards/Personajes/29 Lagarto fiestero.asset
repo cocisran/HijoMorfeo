@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 29 Lagarto fiestero
   m_EditorClassIdentifier: 
   descripcion: Un lagarto fiestero
-  onSelectedHeader: 'que vivia en '
-  cardSprite: {fileID: 0}
+  onSelectedHeader: que vivia
+  cardSprite: {fileID: 21300000, guid: ca93da2a3c1626445ba7ebc0cdc9e227, type: 3}
   etiquetas: []
   gameStage: 0
   estres: 0

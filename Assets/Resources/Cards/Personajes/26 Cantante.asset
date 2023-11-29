@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 26 Cantante
   m_EditorClassIdentifier: 
   descripcion: Una cantante
-  onSelectedHeader: 'que vivia en '
-  cardSprite: {fileID: 0}
+  onSelectedHeader: que vivia
+  cardSprite: {fileID: 21300000, guid: 4d8b73054b5f83c46ba5dda2aa1416e9, type: 3}
   etiquetas: []
   gameStage: 0
   estres: 0

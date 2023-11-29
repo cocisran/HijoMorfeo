@@ -29,7 +29,10 @@ public class GameSupervisor : MonoBehaviour
     [Header("GameVariables")]
     public string history;
     public static GameStages CurrentGameStage;
-    public String historyStart = "Había una vez..";
+    public String historyStart = "Había una vez.. ";
+    public int estres = 0;
+    public int edad = 0;
+    public int cansancio = 0;
 
     private bool gameGoesOn;
     
@@ -49,7 +52,7 @@ public class GameSupervisor : MonoBehaviour
         CurrentGameStage = GameStages.SelectCharacter;
         header.text = historyStart;
 
-        // Para obtimizar busqueda
+        // Para optimizar busqueda
         characterCards = Resources.LoadAll<Card>(pathCharacterCards);
         placeCards = Resources.LoadAll<Card>(pathPlaceCards);
         situationCards = Resources.LoadAll<Card>(pathSituationCards);
@@ -82,6 +85,7 @@ public class GameSupervisor : MonoBehaviour
                     source = situationCards;
                     break;
                 }
+            
         }
         int option1Index = UnityEngine.Random.Range(0, source.Length);
         int option2Index = UnityEngine.Random.Range(0, source.Length);
@@ -131,7 +135,7 @@ public class GameSupervisor : MonoBehaviour
             case GameStages.SelectScenary:
                 {
                     header.text = card_selected.onSelectedHeader;
-                    history +=  card_selected.descripcion + " " + card_selected.onSelectedHeader ;
+                    history += " " + card_selected.descripcion + " " + card_selected.onSelectedHeader ;
                     break;
                 }
             case GameStages.SelectSituation:
@@ -141,9 +145,15 @@ public class GameSupervisor : MonoBehaviour
                     break;
                 }
         }
+        estres += card_selected.estres;
+        edad += card_selected.edad;
+        cansancio += card_selected.cansancio;
 
         NextStage();
         getNextCards();
         Debug.Log(history);
+        Debug.Log(estres);
+        Debug.Log(edad);
+        Debug.Log(cansancio);
     }
 }

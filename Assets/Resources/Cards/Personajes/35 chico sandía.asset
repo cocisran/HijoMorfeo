@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: "35 chico sand\xEDa"
   m_EditorClassIdentifier: 
   descripcion: "Un chico sand\xEDa"
-  onSelectedHeader: 'que vivia en '
-  cardSprite: {fileID: 0}
+  onSelectedHeader: que vivia
+  cardSprite: {fileID: 21300000, guid: 68822969e7ee5414680052f54ee76835, type: 3}
   etiquetas: []
   gameStage: 0
   estres: 0

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 7 Tostadora
   m_EditorClassIdentifier: 
   descripcion: "se celebraba el cumplea\xF1os de la tostadora,"
-  onSelectedHeader: texto de transicion
-  cardSprite: {fileID: 0}
+  onSelectedHeader: '-'
+  cardSprite: {fileID: 21300000, guid: cc25cd81f01a91445b8ebfee7e70e8b3, type: 3}
   etiquetas: []
-  gameStage: 0
+  gameStage: 2
   estres: 0
   edad: 0
   cansancio: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1 Panda Rojo
   m_EditorClassIdentifier: 
   descripcion: Un panda rojo jugueton
-  onSelectedHeader: Que vivia
+  onSelectedHeader: que vivia
   cardSprite: {fileID: 21300000, guid: 8e8b32e768174c0419800960e2fc8c72, type: 3}
   etiquetas: []
   gameStage: 0

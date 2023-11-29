@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descripcion: "las pi\xF1as son sagradas."
   onSelectedHeader: '-'
-  cardSprite: {fileID: 0}
+  cardSprite: {fileID: 21300000, guid: c3ce338244a78ca49bcd03b430427049, type: 3}
   etiquetas: []
-  gameStage: 0
+  gameStage: 2
   estres: 0
   edad: 0
   cansancio: 0
