@@ -30,9 +30,9 @@ public class GameSupervisor : MonoBehaviour
     public string history;
     public static GameStages CurrentGameStage;
     public String historyStart = "Había una vez.. ";
-    public int estres = 0;
+    public int desestres = 0;
     public int edad = 0;
-    public int cansancio = 0;
+    public int descanso = 0;
 
     private bool gameGoesOn;
     
@@ -145,15 +145,20 @@ public class GameSupervisor : MonoBehaviour
                     break;
                 }
         }
-        estres += card_selected.estres;
-        edad += card_selected.edad;
-        cansancio += card_selected.cansancio;
+        if (CurrentGameStage != GameStages.DreamEvaluation){
+            desestres += card_selected.desestres;
+            edad += card_selected.edad;
+            descanso += card_selected.descanso;
+        }
+        else{
+            desestres = edad = descanso = 0;
+        }
 
         NextStage();
         getNextCards();
         Debug.Log(history);
-        Debug.Log(estres);
-        Debug.Log(edad);
-        Debug.Log(cansancio);
+        Debug.Log("Desestres = " + desestres);
+        Debug.Log("Edad = " + edad);
+        Debug.Log("Descanso = " + descanso);
     }
 }

@@ -17,9 +17,9 @@ public class Card: ScriptableObject
     public GameSupervisor.GameStages gameStage;
 
     [Header("CardStats")]
-    public int estres;
+    public int desestres;
     public int edad;
-    public int cansancio;
+    public int descanso;
 
     [Header("CardExtra")]
     public AudioSource cardSound;
