@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d16dadc0f6bea41a2fbb97e5c0990a, type: 3}
+  m_Name: 1 Muy Lejano
+  m_EditorClassIdentifier: 
+  descripcion: en un lugar muy muy lejano
+  onSelectedHeader: 'donde '
+  cardSprite: {fileID: 21300000, guid: 15ad40d165d7f8e4899aa7b1c55fbb7c, type: 3}
+  etiquetas: []
+  gameStage: 1
+  estres: 0
+  edad: 0
+  cansancio: 0
+  cardSound: {fileID: 0}
