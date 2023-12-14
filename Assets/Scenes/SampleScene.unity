@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1432909796}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &71275020
 SpriteRenderer:
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 321972478}
   - component: {fileID: 321972479}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Dreamer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,12 +232,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321972477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.16, y: -1.86, z: -0.21783124}
-  m_LocalScale: {x: 3.8, y: 3.8, z: 1}
+  m_LocalPosition: {x: -1.9491119, y: -4058.6226, z: -4051.1829}
+  m_LocalScale: {x: 171.04996, y: 171.04996, z: 45.01314}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1432909796}
-  m_RootOrder: 0
+  m_Father: {fileID: 406134570}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &321972479
 SpriteRenderer:
@@ -322,6 +322,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1432909796}
+  - {fileID: 321972478}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -376,9 +377,14 @@ MonoBehaviour:
   pathCharacterCards: Cards/Personajes
   pathPlaceCards: Cards/Lugares
   pathSituationCards: Cards/Situaciones
+  pathDreamers: 
   header: {fileID: 1183995775}
   history: 
   historyStart: "Hab\xEDa una vez.."
+  desestres: 0
+  edad: 0
+  descanso: 0
+  currentDreamer: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +868,6 @@ Transform:
   m_LocalScale: {x: 45.013145, y: 45.013145, z: 45.013145}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 321972478}
   - {fileID: 71275019}
   m_Father: {fileID: 406134570}
   m_RootOrder: 0

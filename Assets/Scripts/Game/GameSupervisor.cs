@@ -21,7 +21,10 @@ public class GameSupervisor : MonoBehaviour
     private Card[] placeCards;
     private Card[] situationCards;
 
-    
+    [Header("Dreamer Source")]
+    public string pathDreamers;
+
+    private Dreamer[] dreamers;
 
     [Header("UI")]
     public TextMeshProUGUI header;
@@ -33,6 +36,7 @@ public class GameSupervisor : MonoBehaviour
     public int desestres = 0;
     public int edad = 0;
     public int descanso = 0;
+    public Dreamer currentDreamer = null;
 
     private bool gameGoesOn;
     
@@ -56,12 +60,22 @@ public class GameSupervisor : MonoBehaviour
         characterCards = Resources.LoadAll<Card>(pathCharacterCards);
         placeCards = Resources.LoadAll<Card>(pathPlaceCards);
         situationCards = Resources.LoadAll<Card>(pathSituationCards);
+        dreamers = Resources.LoadAll<Dreamer>(pathDreamers);
 
+        // Creamos el primer soñador
+        changeCurrentDreamer();
         // Asignamos las primeras cartas
         getNextCards();
         
     }
 
+    void changeCurrentDreamer()
+    {
+        int index =  UnityEngine.Random.Range(0, dreamers.Length);
+        currentDreamer = dreamers[index];
+
+        // TODO logica para modificar el sprite
+    }
     void getNextCards()
     {
         if (CurrentGameStage == GameStages.DreamEvaluation)
@@ -151,14 +165,21 @@ public class GameSupervisor : MonoBehaviour
             descanso += card_selected.descanso;
         }
         else{
+            // CHECK
+            int dream_score = currentDreamer.evalDream(desestres, edad,descanso);
+
+            // Aqui se debe notificar a donde corresponda de la fase de evaluacion
+            changeCurrentDreamer();
             desestres = edad = descanso = 0;
         }
 
         NextStage();
         getNextCards();
         Debug.Log(history);
-        Debug.Log("Desestres = " + desestres);
-        Debug.Log("Edad = " + edad);
-        Debug.Log("Descanso = " + descanso);
+        Debug.Log("**GAME STATE**");
+        Debug.Log(String.Format("\tElecciones\nEdad : {0}\tDesestres : {1}\tDescanso {2}", edad, desestres, descanso));
+        Debug.Log(String.Format("\tEstadisticas soñador\nEdad : {0}\tEstres : {1}\tDescanso {2}", 
+                  currentDreamer.getEdad(), currentDreamer.getEdad(), currentDreamer.getDescanso() ));
+
     }
 }
