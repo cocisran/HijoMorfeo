@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3e6bd004801bc41a80999574d29804, type: 3}
+  m_Name: "ni\xF1o"
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 0}
+  estres_level_min: 10
+  estres_level_max: 20
+  edad_level_min: 5
+  edad_level_max: 11
+  descanso_level_min: 40
+  descanso_level_max: 80
