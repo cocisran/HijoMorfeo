@@ -35,9 +35,9 @@ public class Dreamer : ScriptableObject
     public int evalDream(int estres_interaction, int edad_interaction, int descanso_interaction)
     {
 
-        return estres_level - estres_interaction +
-               edad - edad_interaction +
-               descanso_level - descanso_interaction;
+        return Mathf.Abs(estres_level - estres_interaction) +
+               Mathf.Abs(edad - edad_interaction) +
+               Mathf.Abs(descanso_level - descanso_interaction);
     }
 
     public int getEstres() { return estres_level;}

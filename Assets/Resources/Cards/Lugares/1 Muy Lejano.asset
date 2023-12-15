@@ -15,11 +15,9 @@ MonoBehaviour:
   descripcion: en un lugar muy muy lejano
   onSelectedHeader: donde
   cardSprite: {fileID: 21300000, guid: 15ad40d165d7f8e4899aa7b1c55fbb7c, type: 3}
-  etiquetas:
-  - Espacio
-  - Futuristico
+  etiquetas: []
   gameStage: 1
-  desestres: 0
-  edad: 0
-  descanso: 0
+  desestres: 10
+  edad: 15
+  descanso: 20
   cardSound: {fileID: 0}

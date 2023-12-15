@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84567accf5de38c4d852f637083cf353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDiferencia: 50
   cardModel: {fileID: 2566299458059133889, guid: f33b240e270dd31438045f0ab8275545, type: 3}
   option1: {fileID: 637779542}
   option2: {fileID: 2142529760}
@@ -767,11 +768,11 @@ RectTransform:
   m_Father: {fileID: 1559631999}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -114.3, y: 187.6}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -114.30002, y: -9.399994}
+  m_SizeDelta: {x: -600, y: 50}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1247432493
 GameObject:
   m_ObjectHideFlags: 0

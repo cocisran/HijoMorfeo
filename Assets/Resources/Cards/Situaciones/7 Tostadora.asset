@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d16dadc0f6bea41a2fbb97e5c0990a, type: 3}
   m_Name: 7 Tostadora
   m_EditorClassIdentifier: 
-  descripcion: "se celebraba el cumplea\xF1os de la tostadora,"
+  descripcion: "se celebraba el cumplea\xF1os de la tostadora."
   onSelectedHeader: '-'
   cardSprite: {fileID: 21300000, guid: cc25cd81f01a91445b8ebfee7e70e8b3, type: 3}
   etiquetas: []
   gameStage: 2
-  estres: 0
+  desestres: 10
   edad: 0
-  cansancio: 0
+  descanso: 10
   cardSound: {fileID: 0}

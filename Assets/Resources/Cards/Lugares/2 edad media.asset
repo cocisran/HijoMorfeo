@@ -15,10 +15,9 @@ MonoBehaviour:
   descripcion: en la edad media
   onSelectedHeader: donde
   cardSprite: {fileID: 21300000, guid: b1abf519c91f44f4d876d60afd6adaa4, type: 3}
-  etiquetas:
-  - 
+  etiquetas: []
   gameStage: 1
-  desestres: 0
-  edad: 0
-  descanso: 0
+  desestres: 10
+  edad: 10
+  descanso: 10
   cardSound: {fileID: 0}

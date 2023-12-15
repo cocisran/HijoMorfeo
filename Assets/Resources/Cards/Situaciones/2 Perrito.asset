@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2d16dadc0f6bea41a2fbb97e5c0990a, type: 3}
-  m_Name: 25 Tigre-3000
+  m_Name: 2 Perrito
   m_EditorClassIdentifier: 
-  descripcion: Un tigre-3000
-  onSelectedHeader: que vivia
-  cardSprite: {fileID: 21300000, guid: cdb45d070f0a30e459a71377775b4780, type: 3}
+  descripcion: un perrito te observaba fijamente.
+  onSelectedHeader: '-'
+  cardSprite: {fileID: 21300000, guid: c07d5bb2839d9e74990054773373b212, type: 3}
   etiquetas: []
   gameStage: 0
-  desestres: 20
-  edad: 5
+  desestres: 0
+  edad: 10
   descanso: 0
   cardSound: {fileID: 0}

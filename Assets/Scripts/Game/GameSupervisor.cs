@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameSupervisor : MonoBehaviour
-{
+public class GameSupervisor : MonoBehaviour {
+    [Header("Maxima diferencia de calificación")]
+    public int maxDiferencia;
+
     [Header("Cartas")]
     public GameObject cardModel;
     public GameObject option1;
@@ -28,7 +30,7 @@ public class GameSupervisor : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI header;
-  
+
     [Header("GameVariables")]
     public string history;
     public static GameStages CurrentGameStage;
@@ -39,18 +41,16 @@ public class GameSupervisor : MonoBehaviour
     public Dreamer currentDreamer = null;
 
     private bool gameGoesOn;
-    
 
-    public enum GameStages
-    {
+
+    public enum GameStages {
         SelectCharacter,
         SelectScenary,
         SelectSituation,
         DreamEvaluation
     }
 
-    void OnEnable()
-    {
+    void OnEnable() {
 
         gameGoesOn = true;
         CurrentGameStage = GameStages.SelectCharacter;
@@ -66,40 +66,34 @@ public class GameSupervisor : MonoBehaviour
         changeCurrentDreamer();
         // Asignamos las primeras cartas
         getNextCards();
-        
+
     }
 
-    void changeCurrentDreamer()
-    {
-        int index =  UnityEngine.Random.Range(0, dreamers.Length);
+    void changeCurrentDreamer() {
+        int index = UnityEngine.Random.Range(0, dreamers.Length);
         currentDreamer = dreamers[index];
 
         // TODO logica para modificar el sprite
     }
-    void getNextCards()
-    {
+    void getNextCards() {
         if (CurrentGameStage == GameStages.DreamEvaluation)
             return;
 
         Card[] source = new Card[0];
-        switch (CurrentGameStage)
-        {
-            case GameStages.SelectCharacter:
-                {
+        switch (CurrentGameStage) {
+            case GameStages.SelectCharacter: {
                     source = characterCards;
                     break;
                 }
-            case GameStages.SelectScenary:
-                {
+            case GameStages.SelectScenary: {
                     source = placeCards;
                     break;
                 }
-            case GameStages.SelectSituation:
-                {
+            case GameStages.SelectSituation: {
                     source = situationCards;
                     break;
                 }
-            
+
         }
         int option1Index = UnityEngine.Random.Range(0, source.Length);
         int option2Index = UnityEngine.Random.Range(0, source.Length);
@@ -122,15 +116,13 @@ public class GameSupervisor : MonoBehaviour
 
     }
 
-    void NextStage()
-    {
+    void NextStage() {
         int num_stages = Enum.GetValues(typeof(GameStages)).Length;
         int current_stage = (int)CurrentGameStage;
-        CurrentGameStage = (GameStages) Enum.ToObject(typeof(GameStages), (current_stage + 1) % num_stages);
+        CurrentGameStage = (GameStages)Enum.ToObject(typeof(GameStages), (current_stage + 1) % num_stages);
     }
 
-    public void UserSelectedOption(Component caller, object data)
-    {
+    public void UserSelectedOption(Component caller, object data) {
         if (!gameGoesOn)
             return;
 
@@ -138,35 +130,33 @@ public class GameSupervisor : MonoBehaviour
 
 
         // Realizamos nuestras acciones de fase y preparamos la siguiente
-        switch (CurrentGameStage)
-        {
-            case GameStages.SelectCharacter:
-                {
+        switch (CurrentGameStage) {
+            case GameStages.SelectCharacter: {
                     header.text = card_selected.onSelectedHeader;
                     history = historyStart + " " + card_selected.descripcion + " " + card_selected.onSelectedHeader;
                     break;
                 }
-            case GameStages.SelectScenary:
-                {
+            case GameStages.SelectScenary: {
                     header.text = card_selected.onSelectedHeader;
-                    history += " " + card_selected.descripcion + " " + card_selected.onSelectedHeader ;
+                    history += " " + card_selected.descripcion + " " + card_selected.onSelectedHeader;
                     break;
                 }
-            case GameStages.SelectSituation:
-                {
+            case GameStages.SelectSituation: {
                     history += " " + card_selected.descripcion;
                     header.text = historyStart;
                     break;
                 }
         }
-        if (CurrentGameStage != GameStages.DreamEvaluation){
+        Debug.Log(CurrentGameStage);
+        if (CurrentGameStage != GameStages.DreamEvaluation) {
             desestres += card_selected.desestres;
             edad += card_selected.edad;
             descanso += card_selected.descanso;
-        }
-        else{
+        } else {
             // CHECK
-            int dream_score = currentDreamer.evalDream(desestres, edad,descanso);
+            int dream_score = currentDreamer.evalDream(desestres, edad, descanso);
+            Debug.Log(String.Format("Evaluación final: {0}", dream_score));
+            Debug.Log(dream_score < maxDiferencia ? "Creaste un buen sueño!" : "Mal sueño");
 
             // Aqui se debe notificar a donde corresponda de la fase de evaluacion
             changeCurrentDreamer();
@@ -177,9 +167,9 @@ public class GameSupervisor : MonoBehaviour
         getNextCards();
         Debug.Log(history);
         Debug.Log("**GAME STATE**");
-        Debug.Log(String.Format("\tElecciones\nEdad : {0}\tDesestres : {1}\tDescanso {2}", edad, desestres, descanso));
-        Debug.Log(String.Format("\tEstadisticas soñador\nEdad : {0}\tEstres : {1}\tDescanso {2}", 
-                  currentDreamer.getEdad(), currentDreamer.getEdad(), currentDreamer.getDescanso() ));
+        Debug.Log(String.Format("\t\tElecciones\n\tEdad : {0} \tDesestres : {1}\tDescanso {2}", edad, desestres, descanso));
+        Debug.Log(String.Format("\t\tEstadisticas soñador\n\tEdad : {0} \tEstres : {1}\tDescanso {2}",
+                  currentDreamer.getEdad(), currentDreamer.getEdad(), currentDreamer.getDescanso()));
 
     }
 }

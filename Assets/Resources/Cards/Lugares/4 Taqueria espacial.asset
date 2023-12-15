@@ -17,7 +17,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: a51046d84c43eb549aeb7c9303bb99a2, type: 3}
   etiquetas: []
   gameStage: 1
-  estres: 0
-  edad: 0
-  cansancio: 0
+  desestres: 10
+  edad: 10
+  descanso: 20
   cardSound: {fileID: 0}
