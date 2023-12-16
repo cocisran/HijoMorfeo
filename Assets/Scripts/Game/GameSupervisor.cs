@@ -33,6 +33,7 @@ public class GameSupervisor : MonoBehaviour {
 
     [Header("UI")]
     public TextMeshProUGUI header;
+    public TextMeshProUGUI dreamHistory;
 
     [Header("GameVariables")]
     public string history;
@@ -152,6 +153,7 @@ public class GameSupervisor : MonoBehaviour {
                     break;
                 }
         }
+       
         Debug.Log(CurrentGameStage);
         if (CurrentGameStage != GameStages.DreamEvaluation) {
             desestres += card_selected.desestres;
@@ -166,8 +168,9 @@ public class GameSupervisor : MonoBehaviour {
             // Aqui se debe notificar a donde corresponda de la fase de evaluacion
             changeCurrentDreamer();
             desestres = edad = descanso = 0;
+            history = "";
         }
-
+        dreamHistory.text = history;
         NextStage();
         getNextCards();
         Debug.Log(history);
