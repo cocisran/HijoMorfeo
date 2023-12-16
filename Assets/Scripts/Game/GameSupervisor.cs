@@ -10,6 +10,7 @@ public class GameSupervisor : MonoBehaviour {
     public GameEvent onDreamScoreChange;
 
     [SerializeField] public AngerBar angerBar;
+    [SerializeField] public Estadisticas estadisticas;
 
     [Header("Maxima diferencia de calificación")]
     public int maxDiferencia;
@@ -136,6 +137,9 @@ public class GameSupervisor : MonoBehaviour {
 
         angerBar.UpdateAngerBar(UnityEngine.Random.Range(0f, 100f));
         onDreamScoreChange.Raise(this, UnityEngine.Random.Range(1, 11));
+        estadisticas.UpdateCansancio("50");
+        estadisticas.UpdateAnios("50");
+        estadisticas.UpdateEnergia("50");
 
         // Realizamos nuestras acciones de fase y preparamos la siguiente
         switch (CurrentGameStage) {
