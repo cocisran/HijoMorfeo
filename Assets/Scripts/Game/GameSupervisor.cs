@@ -5,6 +5,9 @@ using UnityEngine;
 using TMPro;
 
 public class GameSupervisor : MonoBehaviour {
+    [Header("Events")]
+    public GameEvent changeDreamerEvent;
+
     [Header("Maxima diferencia de calificación")]
     public int maxDiferencia;
 
@@ -73,7 +76,9 @@ public class GameSupervisor : MonoBehaviour {
         int index = UnityEngine.Random.Range(0, dreamers.Length);
         currentDreamer = dreamers[index];
 
-        // TODO logica para modificar el sprite
+        //  modificar el sprite
+        Debug.Log("enviamos");
+        changeDreamerEvent.Raise(this, currentDreamer.characterSprite);
     }
     void getNextCards() {
         if (CurrentGameStage == GameStages.DreamEvaluation)
