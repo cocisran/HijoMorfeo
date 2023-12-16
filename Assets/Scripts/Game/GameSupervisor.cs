@@ -5,6 +5,10 @@ using UnityEngine;
 using TMPro;
 
 public class GameSupervisor : MonoBehaviour {
+
+    [Header("Events")]
+    //public GameEvent onDreamScoreChange;
+
     [Header("Maxima diferencia de calificación")]
     public int maxDiferencia;
 
@@ -128,6 +132,7 @@ public class GameSupervisor : MonoBehaviour {
 
         Card card_selected = (Card)data;
 
+        //onDreamScoreChange.Raise(this, 9);
 
         // Realizamos nuestras acciones de fase y preparamos la siguiente
         switch (CurrentGameStage) {

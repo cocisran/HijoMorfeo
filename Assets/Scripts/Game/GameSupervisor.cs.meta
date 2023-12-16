@@ -3,7 +3,13 @@ guid: 84567accf5de38c4d852f637083cf353
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - onDreamScoreChange: {fileID: 11400000, guid: fd16b638d85509e44acaee6b1e4716de, type: 2}
+  - cardModel: {instanceID: 0}
+  - option1: {instanceID: 0}
+  - option2: {instanceID: 0}
+  - header: {instanceID: 0}
+  - currentDreamer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

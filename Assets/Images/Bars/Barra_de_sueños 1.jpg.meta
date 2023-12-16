@@ -1,0 +1,563 @@
+fileFormatVersion: 2
+guid: 965e0b7e5eac8d94daa1ce2d83aa7b2e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_0"
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 560
+        width: 418
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ed86a59dfa37d419633b40b19ecbf5
+      internalID: -549522180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_1"
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 562
+        width: 429
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80db606dad556546b6a4dea8ca4f513
+      internalID: -614687150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_2"
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 560
+        width: 419
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46956791d5103ca46ac1f647beec5672
+      internalID: 1922315036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_3"
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 562
+        width: 429
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fd681df8afa6043ad39e33f5e3ba7f
+      internalID: -519590716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_4"
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 430
+        width: 420
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3afb7b275555649a2a1a15c7d7d440
+      internalID: -1924004683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_5"
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 430
+        width: 429
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc12d888825a6c4b9033d41a0e4cdae
+      internalID: 1654859776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_6"
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 432
+        width: 419
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e192104364f1cbe42b4d84e83d6dfee8
+      internalID: 1196518169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_7"
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 432
+        width: 434
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d854f4c0db4a846a74a7f31161252f
+      internalID: -196291517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_8"
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 301
+        width: 418
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8f837daa6755142be934de1fd75212
+      internalID: 1715211814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_9"
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 300
+        width: 429
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e54dcb088befd40873ec693f61be4d
+      internalID: -1305546147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_10"
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 302
+        width: 424
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e9460c369cf8b43bec347396dbc399
+      internalID: 1097546735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_11"
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 302
+        width: 431
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592f736b410067e4a9a925a8754d8e19
+      internalID: -1582282936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_12"
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 171
+        width: 421
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ff84b1b33e6fa429272776d0d3913d
+      internalID: -610106772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_13"
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 171
+        width: 429
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424c7b74e3487c043860ff27b770cce5
+      internalID: -1634835946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_14"
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 171
+        width: 419
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d58bf80f175e842b4bf5016c9e834c
+      internalID: -1826043745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_15"
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 171
+        width: 431
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8137c1a96917947b1d19d9919486aa
+      internalID: 2091260651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_16"
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 39
+        width: 419
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963bcb6b938ffec4096d3493464305c4
+      internalID: 467015448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_17"
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 41
+        width: 429
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e0b2164fa3af44f86736a696ad3901
+      internalID: 1735072476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_18"
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 43
+        width: 425
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9607a1e652813954c88b393049f953d5
+      internalID: -817838568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Barra_de_sue\xF1os 1_19"
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 42
+        width: 437
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d57e3ff9e69a547adee480f33b4464
+      internalID: 431014138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Barra_de_sue\xF1os 1_0": -549522180
+      "Barra_de_sue\xF1os 1_1": -614687150
+      "Barra_de_sue\xF1os 1_10": 1097546735
+      "Barra_de_sue\xF1os 1_11": -1582282936
+      "Barra_de_sue\xF1os 1_12": -610106772
+      "Barra_de_sue\xF1os 1_13": -1634835946
+      "Barra_de_sue\xF1os 1_14": -1826043745
+      "Barra_de_sue\xF1os 1_15": 2091260651
+      "Barra_de_sue\xF1os 1_16": 467015448
+      "Barra_de_sue\xF1os 1_17": 1735072476
+      "Barra_de_sue\xF1os 1_18": -817838568
+      "Barra_de_sue\xF1os 1_19": 431014138
+      "Barra_de_sue\xF1os 1_2": 1922315036
+      "Barra_de_sue\xF1os 1_3": -519590716
+      "Barra_de_sue\xF1os 1_4": -1924004683
+      "Barra_de_sue\xF1os 1_5": 1654859776
+      "Barra_de_sue\xF1os 1_6": 1196518169
+      "Barra_de_sue\xF1os 1_7": -196291517
+      "Barra_de_sue\xF1os 1_8": 1715211814
+      "Barra_de_sue\xF1os 1_9": -1305546147
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
