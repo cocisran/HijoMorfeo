@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - onDreamScoreChange: {fileID: 11400000, guid: fd16b638d85509e44acaee6b1e4716de, type: 2}
+  - onAngerChange: {fileID: 11400000, guid: c404160f74e7a3c4796af2235ebd094a, type: 2}
   - cardModel: {instanceID: 0}
   - option1: {instanceID: 0}
   - option2: {instanceID: 0}

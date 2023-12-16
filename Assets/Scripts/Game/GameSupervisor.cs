@@ -7,7 +7,9 @@ using TMPro;
 public class GameSupervisor : MonoBehaviour {
 
     [Header("Events")]
-    //public GameEvent onDreamScoreChange;
+    public GameEvent onDreamScoreChange;
+
+    [SerializeField] public AngerBar angerBar;
 
     [Header("Maxima diferencia de calificación")]
     public int maxDiferencia;
@@ -132,7 +134,8 @@ public class GameSupervisor : MonoBehaviour {
 
         Card card_selected = (Card)data;
 
-        //onDreamScoreChange.Raise(this, 9);
+        angerBar.UpdateAngerBar(UnityEngine.Random.Range(0f, 100f));
+        onDreamScoreChange.Raise(this, UnityEngine.Random.Range(1, 11));
 
         // Realizamos nuestras acciones de fase y preparamos la siguiente
         switch (CurrentGameStage) {

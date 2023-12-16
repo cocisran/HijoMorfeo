@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +24,7 @@ public class DreamScore : MonoBehaviour
     private void setScore(int score)
     {
         currentScore = Mathf.Clamp(score, 1, maxScore);
+        Debug.Log(String.Format("Current Score {0}", currentScore));
         currentSprite = currentScore * 2 - 2;
 
         spriteRenderer.sprite = dreamScoreBar[currentSprite];
@@ -51,7 +53,7 @@ public class DreamScore : MonoBehaviour
 
     public void UpdateDreamScoreBar(Component caller, object data)
     {
-
+        Debug.Log("HOLA");
         if (data is int)
         {
             int score = (int)data;
