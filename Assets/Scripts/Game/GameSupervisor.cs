@@ -5,6 +5,9 @@ using UnityEngine;
 using TMPro;
 
 public class GameSupervisor : MonoBehaviour {
+    [Header("Events")]
+    public GameEvent changeDreamerEvent;
+
     [Header("Maxima diferencia de calificación")]
     public int maxDiferencia;
 
@@ -30,6 +33,7 @@ public class GameSupervisor : MonoBehaviour {
 
     [Header("UI")]
     public TextMeshProUGUI header;
+    public TextMeshProUGUI dreamHistory;
 
     [Header("GameVariables")]
     public string history;
@@ -73,7 +77,9 @@ public class GameSupervisor : MonoBehaviour {
         int index = UnityEngine.Random.Range(0, dreamers.Length);
         currentDreamer = dreamers[index];
 
-        // TODO logica para modificar el sprite
+        //  modificar el sprite
+        Debug.Log("enviamos");
+        changeDreamerEvent.Raise(this, currentDreamer.characterSprite);
     }
     void getNextCards() {
         if (CurrentGameStage == GameStages.DreamEvaluation)
@@ -147,6 +153,7 @@ public class GameSupervisor : MonoBehaviour {
                     break;
                 }
         }
+       
         Debug.Log(CurrentGameStage);
         if (CurrentGameStage != GameStages.DreamEvaluation) {
             desestres += card_selected.desestres;
@@ -161,8 +168,9 @@ public class GameSupervisor : MonoBehaviour {
             // Aqui se debe notificar a donde corresponda de la fase de evaluacion
             changeCurrentDreamer();
             desestres = edad = descanso = 0;
+            history = "";
         }
-
+        dreamHistory.text = history;
         NextStage();
         getNextCards();
         Debug.Log(history);

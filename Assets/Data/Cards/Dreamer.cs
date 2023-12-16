@@ -7,6 +7,7 @@ public class Dreamer : ScriptableObject
 {
     [Header("UI")]
     public Sprite characterSprite;
+    public Sprite awakecharacterSprite;
 
     [Header("DreamerStats")]
     [Space]
