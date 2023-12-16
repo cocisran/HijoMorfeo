@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3e6bd004801bc41a80999574d29804, type: 3}
   m_Name: Adulto
   m_EditorClassIdentifier: 
-  characterSprite: {fileID: 21300000, guid: de1c44be6622fd941a8ceeefd492b795, type: 3}
-  awakecharacterSprite: {fileID: 21300000, guid: d89c7e73465a0f6498885405ad68a461, type: 3}
+  characterSprite: {fileID: 0}
   estres_level_min: 0
   estres_level_max: 60
   edad_level_min: 20
