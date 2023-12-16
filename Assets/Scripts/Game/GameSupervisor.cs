@@ -5,10 +5,16 @@ using UnityEngine;
 using TMPro;
 
 public class GameSupervisor : MonoBehaviour {
+
+
     [Header("Events")]
     public GameEvent changeDreamerEvent;
+    public GameEvent onDreamScoreChange;
 
-    [Header("Maxima diferencia de calificación")]
+    [SerializeField] public AngerBar angerBar;
+    [SerializeField] public Estadisticas estadisticas;
+
+    [Header("Maxima diferencia de calificaciÃ³n")]
     public int maxDiferencia;
 
     [Header("Cartas")]
@@ -38,7 +44,7 @@ public class GameSupervisor : MonoBehaviour {
     [Header("GameVariables")]
     public string history;
     public static GameStages CurrentGameStage;
-    public String historyStart = "Había una vez.. ";
+    public String historyStart = "HabÃ­a una vez.. ";
     public int desestres = 0;
     public int edad = 0;
     public int descanso = 0;
@@ -66,7 +72,7 @@ public class GameSupervisor : MonoBehaviour {
         situationCards = Resources.LoadAll<Card>(pathSituationCards);
         dreamers = Resources.LoadAll<Dreamer>(pathDreamers);
 
-        // Creamos el primer soñador
+        // Creamos el primer soÃ±ador
         changeCurrentDreamer();
         // Asignamos las primeras cartas
         getNextCards();
@@ -134,6 +140,11 @@ public class GameSupervisor : MonoBehaviour {
 
         Card card_selected = (Card)data;
 
+        angerBar.UpdateAngerBar(UnityEngine.Random.Range(0f, 100f));
+        onDreamScoreChange.Raise(this, UnityEngine.Random.Range(1, 11));
+        estadisticas.UpdateCansancio("50");
+        estadisticas.UpdateAnios("50");
+        estadisticas.UpdateEnergia("50");
 
         // Realizamos nuestras acciones de fase y preparamos la siguiente
         switch (CurrentGameStage) {
@@ -162,8 +173,8 @@ public class GameSupervisor : MonoBehaviour {
         } else {
             // CHECK
             int dream_score = currentDreamer.evalDream(desestres, edad, descanso);
-            Debug.Log(String.Format("Evaluación final: {0}", dream_score));
-            Debug.Log(dream_score < maxDiferencia ? "Creaste un buen sueño!" : "Mal sueño");
+            Debug.Log(String.Format("EvaluaciÃ³n final: {0}", dream_score));
+            Debug.Log(dream_score < maxDiferencia ? "Creaste un buen sueÃ±o!" : "Mal sueÃ±o");
 
             // Aqui se debe notificar a donde corresponda de la fase de evaluacion
             changeCurrentDreamer();
@@ -176,7 +187,7 @@ public class GameSupervisor : MonoBehaviour {
         Debug.Log(history);
         Debug.Log("**GAME STATE**");
         Debug.Log(String.Format("\t\tElecciones\n\tEdad : {0} \tDesestres : {1}\tDescanso {2}", edad, desestres, descanso));
-        Debug.Log(String.Format("\t\tEstadisticas soñador\n\tEdad : {0} \tEstres : {1}\tDescanso {2}",
+        Debug.Log(String.Format("\t\tEstadisticas soÃ±ador\n\tEdad : {0} \tEstres : {1}\tDescanso {2}",
                   currentDreamer.getEdad(), currentDreamer.getEdad(), currentDreamer.getDescanso()));
 
     }
