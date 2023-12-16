@@ -702,7 +702,7 @@ MonoBehaviour:
   onDreamScoreChange: {fileID: 11400000, guid: fd16b638d85509e44acaee6b1e4716de, type: 2}
   changeDreamerEvent: {fileID: 11400000, guid: 3dbdde68a8435f145b73ffb09bad9e3c, type: 2}
   angerBar: {fileID: 1777732586}
-  estadisticas: {fileID: 0}
+  estadisticas: {fileID: 1839325881}
   maxDiferencia: 50
   cardModel: {fileID: 2566299458059133889, guid: f33b240e270dd31438045f0ab8275545, type: 3}
   option1: {fileID: 637779542}
@@ -1497,7 +1497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -114.30005, y: -9.399994}
+  m_AnchoredPosition: {x: -114.30002, y: -9.399994}
   m_SizeDelta: {x: -600, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1209103255

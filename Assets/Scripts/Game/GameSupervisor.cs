@@ -137,8 +137,6 @@ public class GameSupervisor : MonoBehaviour {
 
         Card card_selected = (Card)data;
 
-        angerBar.UpdateAngerBar(UnityEngine.Random.Range(0f, 100f));
-        onDreamScoreChange.Raise(this, UnityEngine.Random.Range(1, 11));
         estadisticas.UpdateCansancio("50");
         estadisticas.UpdateAnios("50");
         estadisticas.UpdateEnergia("50");
@@ -167,17 +165,27 @@ public class GameSupervisor : MonoBehaviour {
             desestres += card_selected.desestres;
             edad += card_selected.edad;
             descanso += card_selected.descanso;
+            estadisticas.UpdateCansancio("" + descanso);
+            estadisticas.UpdateAnios("" + edad);
+            estadisticas.UpdateEnergia("" + desestres);
         } else {
             // CHECK
             int dream_score = currentDreamer.evalDream(desestres, edad, descanso);
             Debug.Log(String.Format("Evaluación final: {0}", dream_score));
-            Debug.Log(dream_score < maxDiferencia ? "Creaste un buen sueño!" : "Mal sueño");
+            if (dream_score < maxDiferencia) {
+                Debug.Log("Creaste un buen sueño!");
+                onDreamScoreChange.Raise(this, dream_score);
+            } else {
+                Debug.Log("Creaste un mal sueño");
+                angerBar.UpdateAngerBar(maxDiferencia);
+            }
 
             // Aqui se debe notificar a donde corresponda de la fase de evaluacion
             changeCurrentDreamer();
             desestres = edad = descanso = 0;
             history = "";
         }
+
         dreamHistory.text = history;
         NextStage();
         getNextCards();
