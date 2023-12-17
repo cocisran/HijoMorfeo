@@ -137,9 +137,9 @@ public class GameSupervisor : MonoBehaviour {
 
         Card card_selected = (Card)data;
 
-        estadisticas.UpdateCansancio("50");
-        estadisticas.UpdateAnios("50");
-        estadisticas.UpdateEnergia("50");
+        estadisticas.UpdateCansancio(currentDreamer.getDescanso().ToString());
+        estadisticas.UpdateAnios(currentDreamer.getEdad().ToString());
+        estadisticas.UpdateEstres(currentDreamer.getEstres().ToString());
 
         // Realizamos nuestras acciones de fase y preparamos la siguiente
         switch (CurrentGameStage) {
@@ -165,9 +165,6 @@ public class GameSupervisor : MonoBehaviour {
             desestres += card_selected.desestres;
             edad += card_selected.edad;
             descanso += card_selected.descanso;
-            estadisticas.UpdateCansancio("" + descanso);
-            estadisticas.UpdateAnios("" + edad);
-            estadisticas.UpdateEnergia("" + desestres);
         } else {
             // CHECK
             int dream_score = currentDreamer.evalDream(desestres, edad, descanso);

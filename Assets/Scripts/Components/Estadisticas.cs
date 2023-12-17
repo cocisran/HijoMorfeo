@@ -18,7 +18,7 @@ public class Estadisticas : MonoBehaviour
     }
 
     // Método para actualizar el texto del segundo TextMeshPro
-    public void UpdateEnergia(string newText)
+    public void UpdateEstres(string newText)
     {
         if (energia != null)
             energia.text = newText;
