@@ -16,7 +16,7 @@ public class DreamScore : MonoBehaviour
     private float timer = 0f;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

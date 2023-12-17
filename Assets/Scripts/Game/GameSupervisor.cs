@@ -37,6 +37,7 @@ public class GameSupervisor : MonoBehaviour {
     [Header("UI")]
     public TextMeshProUGUI header;
     public TextMeshProUGUI dreamHistory;
+    public GameObject DreamEvaluator;
 
     [Header("GameVariables")]
     public string history;
@@ -83,6 +84,10 @@ public class GameSupervisor : MonoBehaviour {
         //  modificar el sprite
         Debug.Log("enviamos");
         changeDreamerEvent.Raise(this, currentDreamer.characterSprite);
+
+        estadisticas.UpdateCansancio(currentDreamer.getDescanso().ToString());
+        estadisticas.UpdateAnios(currentDreamer.getEdad().ToString());
+        estadisticas.UpdateEstres(currentDreamer.getEstres().ToString());
     }
     void getNextCards() {
         if (CurrentGameStage == GameStages.DreamEvaluation)
@@ -156,6 +161,7 @@ public class GameSupervisor : MonoBehaviour {
             case GameStages.SelectSituation: {
                     history += " " + card_selected.descripcion;
                     header.text = historyStart;
+                    NextStage();
                     break;
                 }
         }
@@ -168,29 +174,38 @@ public class GameSupervisor : MonoBehaviour {
         } else {
             // CHECK
             int dream_score = currentDreamer.evalDream(desestres, edad, descanso);
-            Debug.Log(String.Format("Evaluación final: {0}", dream_score));
-            if (dream_score < maxDiferencia) {
-                Debug.Log("Creaste un buen sueño!");
-                onDreamScoreChange.Raise(this, dream_score);
-            } else {
-                Debug.Log("Creaste un mal sueño");
+
+            dream_score = Mathf.Clamp((dream_score * 100) / 180, 0, 100);
+            dream_score = 100 - dream_score;
+            Debug.Log(String.Format("###Evaluación final: {0}", dream_score));
+            if (dream_score <= maxDiferencia) {
                 angerBar.UpdateAngerBar(maxDiferencia);
             }
-
+            DreamEvaluator.SetActive(true);
+            onDreamScoreChange.Raise(this, dream_score / 10);
+            Invoke("newRound", 1.5f);
             // Aqui se debe notificar a donde corresponda de la fase de evaluacion
-            changeCurrentDreamer();
-            desestres = edad = descanso = 0;
-            history = "";
+            
         }
 
         dreamHistory.text = history;
-        NextStage();
-        getNextCards();
+   
         Debug.Log(history);
         Debug.Log("**GAME STATE**");
         Debug.Log(String.Format("\t\tElecciones\n\tEdad : {0} \tDesestres : {1}\tDescanso {2}", edad, desestres, descanso));
         Debug.Log(String.Format("\t\tEstadisticas soñador\n\tEdad : {0} \tEstres : {1}\tDescanso {2}",
                   currentDreamer.getEdad(), currentDreamer.getEdad(), currentDreamer.getDescanso()));
+        NextStage();
+        getNextCards();
+    }
 
+    void newRound()
+    {
+        DreamEvaluator.SetActive(false);
+        getNextCards();
+        changeCurrentDreamer();
+        desestres = edad = descanso = 0;
+        history = "";
+        dreamHistory.text = history;
     }
 }
