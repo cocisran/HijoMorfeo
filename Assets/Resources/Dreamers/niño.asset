@@ -16,7 +16,7 @@ MonoBehaviour:
   awakecharacterSprite: {fileID: 21300000, guid: bafd573877d23ae4899ba1b35af3b5c6, type: 3}
   estres_level_min: 0
   estres_level_max: 60
-  edad_level_min: 0
+  edad_level_min: 5
   edad_level_max: 20
   descanso_level_min: 0
   descanso_level_max: 60
