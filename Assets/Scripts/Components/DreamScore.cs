@@ -53,7 +53,6 @@ public class DreamScore : MonoBehaviour
 
     public void UpdateDreamScoreBar(Component caller, object data)
     {
-        Debug.Log("HOLA");
         if (data is int)
         {
             int score = (int)data;

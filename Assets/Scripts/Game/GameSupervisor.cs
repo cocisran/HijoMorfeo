@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameSupervisor : MonoBehaviour {
     [Header("Events")]
@@ -80,9 +81,9 @@ public class GameSupervisor : MonoBehaviour {
     void changeCurrentDreamer() {
         int index = UnityEngine.Random.Range(0, dreamers.Length);
         currentDreamer = dreamers[index];
+        currentDreamer.resetStats();
 
         //  modificar el sprite
-        Debug.Log("enviamos");
         changeDreamerEvent.Raise(this, currentDreamer.characterSprite);
 
         estadisticas.UpdateCansancio(currentDreamer.getDescanso().ToString());
@@ -166,7 +167,6 @@ public class GameSupervisor : MonoBehaviour {
                 }
         }
        
-        Debug.Log(CurrentGameStage);
         if (CurrentGameStage != GameStages.DreamEvaluation) {
             desestres += card_selected.desestres;
             edad += card_selected.edad;
@@ -174,8 +174,8 @@ public class GameSupervisor : MonoBehaviour {
         } else {
             // CHECK
             int dream_score = currentDreamer.evalDream(desestres, edad, descanso);
-
-            dream_score = Mathf.Clamp((dream_score * 100) / 180, 0, 100);
+            Debug.Log(dream_score);
+            dream_score = Mathf.Clamp((dream_score * 100) / 150, 0, 100);
             dream_score = 100 - dream_score;
             Debug.Log(String.Format("###Evaluación final: {0}", dream_score));
             if (dream_score <= maxDiferencia) {
@@ -190,11 +190,15 @@ public class GameSupervisor : MonoBehaviour {
 
         dreamHistory.text = history;
    
-        Debug.Log(history);
         Debug.Log("**GAME STATE**");
         Debug.Log(String.Format("\t\tElecciones\n\tEdad : {0} \tDesestres : {1}\tDescanso {2}", edad, desestres, descanso));
         Debug.Log(String.Format("\t\tEstadisticas soñador\n\tEdad : {0} \tEstres : {1}\tDescanso {2}",
                   currentDreamer.getEdad(), currentDreamer.getEdad(), currentDreamer.getDescanso()));
+        Debug.Log(angerBar.ObtenerVida());
+        if (angerBar.ObtenerVida() == 100) {
+            Debug.Log("Yamuereteprro");
+            SceneManager.LoadScene("Game_over");
+        }
         NextStage();
         getNextCards();
     }

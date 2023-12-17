@@ -7,7 +7,9 @@ public class AngerBar : MonoBehaviour {
 
     public Slider slider;
 
-
+    public float ObtenerVida() {
+        return slider.value;
+    }
     public void CambiarVidaActual(float vidaActual) {
         slider.value = vidaActual;
     }
